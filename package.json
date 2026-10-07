@@ -1,0 +1,33 @@
+{
+  "name": "low-cortisol",
+  "version": "0.1.0",
+  "description": "Low Cortisol: hides ragebait on X. Text judged by TypeSafe Jev; images transcribed by your Claude login via a local companion.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baldodev/low-cortisol.git"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "check": "npm run typecheck && npm test",
+    "gen:keys": "node scripts/gen-keys.mjs",
+    "gen:icons": "node scripts/gen-icons.mjs",
+    "smoke:jev": "node scripts/smoke-jev.mjs",
+    "smoke:vision": "node scripts/smoke-vision.mjs",
+    "eval:feedback": "node scripts/run-ts.mjs scripts/eval-feedback.ts"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.3.4",
+    "@types/node": "^26.6.3",
+    "esbuild": "^0.28.2",
+    "jsdom": "^30.1.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.2"
+  }
+}

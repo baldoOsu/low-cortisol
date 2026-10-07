@@ -1,0 +1,26 @@
+node_modules/
+coverage/
+*.log
+.env
+.env.*
+# Private extension keys are never kept (only public keys pin the extension IDs)
+*.pem
+extension/keys/*.private*
+# Local companion data if LOW_CORTISOL_HOME is pointed inside the repo
+.lc-home/
+.worktrees/
+
+# Local secrets / machine config — never commit
+config.json
+
+# Private agent tooling and live verification evidence (kept on disk, not shipped)
+.claude/
+.superpowers/
+docs/live-x-shots/
+docs/live-x-shots-reload/
+
+# Screenshots outside fixture/icon trees
+*.png
+!extension/static/icons/**
+!dist/**/icons/**
+!test/fixtures/**

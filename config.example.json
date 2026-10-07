@@ -1,0 +1,10 @@
+{
+  "typesafeApiKey": "YOUR_TYPESAFE_API_KEY",
+  "claudePath": "",
+  "jevBaseUrl": "https://api.typesafe.ai",
+  "jevModel": "jev-latest",
+  "claudeEffort": "low",
+  "jevConcurrency": 6,
+  "visionConcurrency": 2,
+  "cacheTtlDays": 30
+}

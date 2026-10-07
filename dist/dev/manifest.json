@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Low Cortisol (Dev)",
+  "version": "0.1.0",
+  "description": "Hides ragebait on X. Text judged by TypeSafe Jev; images transcribed by your Claude login via a local companion.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAptkOj2xTBMvBNxrpPxnlIw/ZtAy+7ayHQ9nGMwt2ir0Vzm/QVUF+FimyBhAPaS6cFeFe8W+VDnvFxkOMFou0chYtFHXhrLa8q+tOAO90XvgC5a9hCFv+rgeT5I4SJrNfOWyGoyJeNqWPf68tu70A0kvlNC9rzOonMAIM8EVM8Sy7O7gRW3qRIHNBCF1ekUqXONP3ZE7MxNOeBxONC0NGQil6lf9dV+9baOsEyWKKdLDbicgBCUrq27fYbxbWyKcDeJ0tFpbjvQpA1hkqQ9FswFj4zOk90/EvqrlwTAyEtfwDNF+a4vFXGgn+gj+Ji4052uX7MQ9qbxbXJEHTzZbUIwIDAQAB",
+  "permissions": [
+    "storage",
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*",
+    "https://pbs.twimg.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Low Cortisol (Dev)",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "minimum_chrome_version": "120"
+}
